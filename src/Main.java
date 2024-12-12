@@ -6,6 +6,8 @@ import java.util.ArrayList;
 
 
 public class Main {
+
+
     static JPanel topp = new JPanel();
     static JPanel bottom = new JPanel();
     static JFrame jFrame = new JFrame();
@@ -28,15 +30,15 @@ public class Main {
 
         jFrame.setVisible(true);
 
-        //mouse over textfield will produce a text
-        //password.setToolTipText("hello");
+        // As soon as the cursor reaches the boundary of that component, a pop-up appears with text.  I think it's pretty cool
+        // password.setToolTipText("hello");
 
     }
     private static void upper(){
 
         // Code for the upper layer of the window
-        // With the four criteria for a good password
-        // I did add them to a arrayList to get a cleaner code
+        // With four criteria for a good password
+        // I did add them to a arrayList to make it look little cleaner
 
         topp.setLayout(new GridLayout(4,1));
 
@@ -61,8 +63,9 @@ public class Main {
     }
     private static void downer(){
 
-        // Now here came the slightly longer and slightly messier part
-        // I used a KeyListener to keep track of what the input is
+        // Here came the slightly longer and slightly messier part
+        // I used a KeyListener to keep track of the current input
+        // There is a global variable (theText) that keeps track of the length
 
         JLabel jl = new JLabel("Password: ");
         JTextField passwordField = new JTextField(theText,15);
@@ -95,8 +98,6 @@ public class Main {
                     if (theText.matches(".*\\W") && !jCheckBoxSymbols.isSelected()) jCheckBoxSymbols.doClick();
 
                 }
-
-
             }
             @Override
             public void keyPressed(KeyEvent e) {
