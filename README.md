@@ -19,7 +19,12 @@
 Installation  
   1. Clone this repository:  
      ```bash  
-     git clone https://github.com/Victor-W510/ThePasswordProject.git  
+     git clone https://github.com/Victor-W510/ThePasswordProject.git
+     Run the program:
+  2.Open it in your Java IDE (like IntelliJ or Eclipse), and hit run.
+
+  3.Test your password:
+    Type your password into the prompt and tweak it until all the rules are satisfied!
 
 Usage
 
