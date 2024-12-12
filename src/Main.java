@@ -71,14 +71,14 @@ public class Main {
             @Override
             public void keyTyped(KeyEvent e)  {
 
-                if(e.getKeyChar() == KeyEvent.VK_BACK_SPACE && theText.length() > 0) {
+                if(e.getKeyChar() == KeyEvent.VK_BACK_SPACE && !theText.isEmpty()) {
                     theText = theText.substring(0,theText.length()-1);
                     if (jCheckBoxLenght.isSelected() && theText.length() <= 12) jCheckBoxLenght.doClick();
                     if (!theText.matches(".*[A-Z].*") && jCheckBoxUppercase.isSelected()) jCheckBoxUppercase.doClick();
                     if (!theText.matches(".*\\d.*") && jCheckBoxNumber.isSelected()) jCheckBoxNumber.doClick();
                     if (!theText.matches(".*\\W") && jCheckBoxSymbols.isSelected()) jCheckBoxSymbols.doClick();
 
-                    if (passwordField.getText().equals("")){
+                    if (passwordField.getText().isEmpty()){
                         jCheckBoxLenght.setSelected(false);
                         jCheckBoxSymbols.setSelected(false);
                         jCheckBoxNumber.setSelected(false);
